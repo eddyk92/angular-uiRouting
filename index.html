@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- CSS (load bootstrap) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+	<style>
+	.navbar {border-radius: 0;}
+	</style>
+
+	<!-- JS (load with angular, ui-routing, and custome js file) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	<script src="app.js"></script>
+
+	<title>routerApp</title>
+</head>
+
+<!-- apply angular to site -->
+<body ng-app="routerApp">
+
+	<!-- navigation -->
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a ui-sref="home">Home</a></li>
+			<li><a ui-sref="about">About</a></li>
+		</ul>
+	</nav>
+
+	<!-- main content -->
+	<div class="container">
+		<!-- inject content here -->
+		<div ui-view></div>
+	</div>
+
+</body>
+</html>
